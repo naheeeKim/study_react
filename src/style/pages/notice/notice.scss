@@ -1,0 +1,8 @@
+.notice-list{
+    display: flex;
+    gap:3rem 1rem;
+    flex-wrap:wrap;
+    li{
+        width: calc(33.33% - 1rem);
+    }
+}

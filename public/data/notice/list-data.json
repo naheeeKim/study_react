@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "href":"/",
+        "imgSrc":"/images/temp/img_edu_temp_01.png",
+        "title":"[신입사원토론] 서금원 입사하려면 나를 따르라",
+        "date":"2023. 10. 5"
+    },
+    {
+        "id":2,
+        "href":"/",
+        "imgSrc":"/images/temp/img_edu_temp_02.png",
+        "title":"[신입사원토론] 서금원 입사하려면 나를 따르라",
+        "date":"2023. 10. 5"
+    },
+    {
+        "id":3,
+        "href":"/",
+        "imgSrc":"/images/temp/img_edu_temp_03.png",
+        "title":"[신입사원토론] 서금원 입사하려면 나를 따르라",
+        "date":"2023. 10. 5"
+    },
+    {
+        "id":4,
+        "href":"/",
+        "imgSrc":"/images/temp/img_edu_temp_04.png",
+        "title":"[신입사원토론] 서금원 입사하려면 나를 따르라",
+        "date":"2023. 10. 5"
+    }
+]

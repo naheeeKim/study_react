@@ -1,0 +1,157 @@
+@import "./var";
+
+:root {
+  // typo
+  --default-font-size: 16px;
+  --base-font-size: 16;
+  // responsive
+  --breakpoint-laptop-lg: 1799px;
+  --breakpoint-laptop-md: 1599px;
+  --breakpoint-laptop-sm: 1399px;
+  --breakpoint-laptop: 1199px; // 랩탑 기준
+  --breakpoint-tablet: 999px; // 테블릿 기준
+  --breakpoint-tablet-sm: 799px;
+  --breakpoint-mobile: 599px;
+  --breakpoint-mobile-sm: 399px; // 모바일 기준
+  --breakpoint-min: 320px;
+
+  // color
+  --color-pastel-skyblue: #c4e6f6;
+  --color-pastel-blue: #cadaf3;
+  --color-pastel-green: #d7f0da;
+  --color-pastel-orange: #efd3b6;
+  --color-pastel-yellow: #f5ebb2;
+  --color-pastel-pink: #f2d2db;
+  --color-pastel-gray: #dfeaf4;
+
+  --color-midtone-blue: #467BAB;
+  --color-midtone-green: #4D9F54;
+  --color-midtone-mint: #4B909E;
+
+  --color-blue1: #159ede;
+  --color-blue2: #0c58ca;
+  --color-blue3: #1039a1;
+  --color-blue4: #14243c;
+
+  --color-gray1: #ffffff;
+  --color-gray2: #eeeeee;
+  --color-gray3: #e2e2e2;
+  --color-gray4: #dddddd;
+  --color-gray5: #cccccc;
+  --color-gray6: #999999;
+  --color-gray7: #666666;
+  --color-gray8: #000000;
+
+  --color-grayish1: #f5f9fd;
+  --color-grayish2: #eaf0f7;
+  --color-grayish3: #d9e2ec;
+  --color-grayish4: #c8d3de;
+  --color-grayish5: #b1beca;
+  --color-grayish6: #99a4ae;
+  --color-grayish7: #7d8890;
+  --color-grayish8: #5c656d;
+  --color-grayish9: #434b53;
+  --color-grayish10: #1b2024;
+
+  // border-radius
+  --border-radius-xl: 2.25rem;
+  --border-radius-l: 2rem;
+  --border-radius-m: 1.5rem;
+  --border-radius-s: 1rem;
+
+  //spacing
+  --spacing-xl: 10rem;
+
+  //grid-gutter
+  --grid-gutter: 1rem;
+
+  @media screen and (min-width: 2400px) {
+    --default-font-size: 19px;
+  }
+  @media screen and (max-width: 2399px) {
+    --default-font-size: 18px;
+  }
+  @media screen and (max-width: 2199px) {
+    --default-font-size: 17px;
+  }
+  @media screen and (max-width: 1999px) {
+    --default-font-size: 16px;
+  }
+  @media screen and (max-width: 1799px) {
+    --default-font-size: 15px;
+  }
+  @media screen and (max-width: 1599px) {
+    --default-font-size: 14px;
+  }
+  @media screen and (max-width: 1399px) {
+    --default-font-size: 13px;
+  }
+  @media screen and (max-width: 1199px) {
+    // laptop 마지막
+    --default-font-size: 12px;
+  }
+  @media screen and (max-width: 999px) {
+    // tablet 시작
+    --default-font-size: 11px;
+    --base-font-size: 11;
+    // border-radius
+    --border-radius-xl: 2.5rem;
+    --border-radius-l: 2.5rem;
+    --border-radius-m: 2rem;
+    --border-radius-s: 1.5rem;
+    //grid-gutter
+    --grid-gutter: 1.25rem;
+  }
+  @media screen and (max-width: 799px) {
+    --default-font-size: 10px;
+  }
+  @media screen and (max-width: 599px) {
+    //mobile 시작
+    --default-font-size: 9px;
+    --base-font-size: 8;
+    // border-radius
+    --border-radius-xl: 2.5rem;
+    --border-radius-l: 2.5rem;
+    --border-radius-m: 2rem;
+    --border-radius-s: 1.5rem;
+    // spacing
+    --spacing-xl: 9rem;
+  }
+  @media screen and (max-width: 399px) {
+    --default-font-size: 8px;
+  }
+}
+html {
+  font-family: "NotoSansKR", --apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: var(--color-gray8);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  word-break: keep-all;
+  font-size: var(--default-font-size);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+@for $i from 1 through 9 {
+  .fw-#{$i * 100} {
+    font-weight: $i * 100;
+  }
+}
+
+.content-container {
+  padding: 0 to-vw(80px);
+  @media screen and (max-width: 999px) {
+    padding: 0 to-vw(42px, 999px);
+  }
+  @media screen and (max-width: 399px) {
+    padding: 0 to-vw(16px, 399px);
+  }
+}

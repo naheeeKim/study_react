@@ -1,0 +1,55 @@
+@use "../../style/var.scss" as variables;
+
+.tab{
+    display: inline-flex;
+    &-item{
+        display: block;
+        cursor: pointer;
+        padding:1rem;
+    }
+    &-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        height: 10rem;
+        text-align: center;
+    }
+}
+
+.default-tab{
+    border-bottom: 1px solid var(--color-gray3);
+    .tab-item{
+        position: relative;
+        &::before{
+            content:"";
+            position: absolute;
+            left:50%;
+            bottom:-1px;
+            width: 0;
+            height: 5px;
+            transform:translateX(-50%);
+            background-color:var(--color-pastel-orange);
+            z-index:1;
+            transition: variables.$hoverTransition;
+        }
+        &.selected{
+            &::before{
+                width: 100%;
+            }
+        }
+    }
+}
+.img-tab{
+    .tab-item{
+        flex:1;
+        .img-wrap{
+            display: block;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+

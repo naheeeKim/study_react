@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
-import './style/_reset.scss';
+import './style/app.scss';
 import Guide from './pages/guide';
+import NoticeIndex from './pages/Notice/NoticeIndex';
 
 
 function El2(){
@@ -11,7 +11,9 @@ function El2(){
 }
 function El3(){
   return(
-    <>El3</>
+    <>
+      <p>index~</p>
+    </>
   )
 }
 
@@ -21,6 +23,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/guide/*" element={<Guide />}></Route>
+        <Route path="/Notice/NoticeIndex" element={<NoticeIndex />}></Route>
         <Route path="/el2/*" element={<El2 />}></Route>
         <Route path="*" element={<El3 />}></Route>
       </Routes>
