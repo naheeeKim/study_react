@@ -1,31 +1,19 @@
 import React ,{useEffect, useState}from "react";
 import "../../style/pages/notice/notice.scss";
-import NoticeListItem from "./NoticeListItem";
 import axios from 'axios';
 
-export default function NoticeList(){
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
+export default function NoticeDetail(){
 
-    useEffect(() => {
-        const fetchData = async () => {
-        try {
-            const response = await axios.get('../../data/notice/list-data.json');
-            setData(response.data);
-        } catch (err) {
-            setError(err);
-        }
-        };
-
-        fetchData();
-    }, []);
     return (
         <>
-            <ul className='notice-list'>
-                {data?.map(item => (
-                    <NoticeListItem data={item} key={item.id}></NoticeListItem>
-                ))}
-            </ul>
+            <div className="notice-detail">
+                <div className="notice-top">
+                    <strong className="tit"></strong>
+                </div>
+                <div className="notice-content">
+                    
+                </div>
+            </div>
         </>
     )
 }
