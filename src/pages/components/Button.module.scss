@@ -1,2 +1,122 @@
-@use "../../style/var.scss" as variables;
+@import "../../style/_var.scss";
 
+.btn{
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    &-wrap{
+        display: inline-block;
+    }
+
+    &[data-size="l"]{
+        border-radius:0.5rem;
+        width: 3rem;
+        height: 3rem;
+        padding: 1rem;
+        svg{
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+    &[data-size="m"]{
+        border-radius: 0.4375rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.8125rem;
+        svg{
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+    }
+    &[data-color="blue"]{
+        background-color: var(--color-blue1);
+        color:var(--color-gray1);
+    }
+    &[data-color="white"]{
+        background-color: var(--color-gray1);
+    }
+    &[data-color="gray"]{
+        background-color: var(--color-grayish2);
+    }
+
+    &[data-border-color]{
+        border:1px solid;
+        transition:border $hoverTransition;
+        &[data-border-color="gray"]{
+            border-color:var(--color-gray4);
+            &:hover{
+                border-color:var(--color-gray8);
+            }
+        }
+        &[data-border-color="white"]{
+            border-color:var(--color-gray1);
+        }
+    }
+
+    &[data-hover-type="bg"]{
+        position: relative;
+        overflow: hidden;
+        &::after{
+            content:"";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: all $hoverTransition;
+            z-index:1;
+        }
+        *{
+            position: relative;
+            z-index: 2;
+        }
+        &:hover{
+            &::after{
+                opacity: 1;
+            }
+        }
+
+        &[data-hover-text]{
+            width: auto;
+            &::before{
+                margin-right:0.31rem;
+            }
+        }
+    }
+    &[data-hover-type="open"]{
+        transition: all $hoverTransition;
+        &::before{
+            content:attr(data-hover-text);
+            width: 0;
+            display: inline-flex;
+            opacity: 0;
+        }
+        &:hover{
+            width:100%;
+            &::before{
+                width: 100%;
+                opacity: 1;
+                margin-right:0.31rem;
+            }
+        }
+        &[data-size="m"]{
+            &:hover{
+                &::before{
+                    margin-right: 0.1875rem;
+                }
+            }
+        }
+    }
+    &[data-hover-text]{
+        &::before{
+            content:attr(data-hover-text);
+            display: inline-flex;
+            text-align: left;
+            transition: all $hoverTransition;
+            overflow: hidden;
+        }
+    }
+}

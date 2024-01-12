@@ -9,7 +9,7 @@ import Zustand from "./zustand";
 export default function Guide(){
     return(
     <>
-        <div id="main">
+        <div id="guideMain">
             <Grid />
             <ComponentsGuide />
             <TabGuide />

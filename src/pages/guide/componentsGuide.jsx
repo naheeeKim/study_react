@@ -1,5 +1,8 @@
 import Layout from './layout';
 import Tag from '../components/Tag';
+import Button from '../components/Button';
+import ArrowIcon from "../components/ArrowIcon";
+
 
 export default function ComponentsGuide() { 
     return (
@@ -63,7 +66,76 @@ function TagLayout(){
 function ButtonLayout(){
     return (
         <>
-
+            <div className="con-box">
+                <div className="btn-box">
+                    <div className="_caption">size="l"</div>
+                    <div className="inner-box">
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="blue" size="l" download hoverType="open" hoverText="바로가기">
+                            <ArrowIcon type="arrow-left" direction="left" size="14" color="white" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="white" size="l" download hoverType="bg">
+                            <ArrowIcon type="arrow-left" direction="left" size="14" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="gray" size="l" download hoverType="bg">
+                            <ArrowIcon type="arrow-left" direction="left" size="14" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="blue" size="l" download hoverType="bg" hoverText="바로가기">
+                            <ArrowIcon type="arrow-out" direction="left" size="14" color="white" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="white" size="l" download hoverType="bg">
+                            <ArrowIcon type="arrow-out" direction="left" size="14" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="gray" size="l" download hoverType="bg">
+                            <ArrowIcon type="arrow-out" direction="left" size="14" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                    </div>
+                </div>
+                <div className="btn-box">
+                    <div className="_caption">size="m"</div>
+                    <div className="inner-box">
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="blue" size="m" download hoverType="open" hoverText="바로가기"> 
+                            <ArrowIcon type="arrow-left" direction="left" size="24" color="white" strokeWidth="1.34"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="white" size="m" download>
+                            <ArrowIcon type="arrow-left" direction="left" size="24" color="black" strokeWidth="1.34"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="a" href="/" target="_blank" color="gray" size="m" download>
+                            <ArrowIcon type="arrow-left" direction="left" size="24" color="black" strokeWidth="1.34"></ArrowIcon>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            <div className="con-box">
+                <div className="btn-box">
+                    <div className="_caption">type="chevron" size="l"</div>
+                    <div className="inner-box">
+                        <Button type="arrow" tag="button" borderColor="gray" size="l"> 
+                            <ArrowIcon type="chevron-left" direction="left" size="24" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="button" borderColor="gray" size="l"> 
+                            <ArrowIcon type="chevron-right" direction="left" size="24" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="button" borderColor="white" size="l" hoverType="bg">
+                            <ArrowIcon type="chevron-left" direction="left" size="24" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="button" borderColor="white" size="l" hoverType="bg">
+                            <ArrowIcon type="chevron-right" direction="left" size="24" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="button" color="blue" size="l" hoverType="bg">
+                            <ArrowIcon type="chevron-left" direction="left" size="24" color="white" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="button" color="blue" size="l" hoverType="bg">
+                            <ArrowIcon type="chevron-right" direction="left" size="24" color="white" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="button" color="white" size="l" hoverType="bg">
+                            <ArrowIcon type="chevron-left" direction="left" size="24" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                        <Button type="arrow" tag="button" color="white" size="l" hoverType="bg">
+                            <ArrowIcon type="chevron-right" direction="left" size="24" color="black" strokeWidth="1.5"></ArrowIcon>
+                        </Button>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

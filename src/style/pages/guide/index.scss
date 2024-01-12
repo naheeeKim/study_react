@@ -1,5 +1,5 @@
 @import "../../var";
-#main {
+#guideMain {
   padding-top: 140px;
   .container {
     max-width: 1920px;
@@ -173,6 +173,10 @@
         letter-spacing: -0.32px;
       }
     }
+
+    ._caption{
+        background-color: var(--color-gray1);
+    }
   }
 
   #tag{
@@ -183,12 +187,32 @@
         flex-direction: column;
         gap: 1rem;
         border-radius:1.25rem;
-        ._caption{
-            background-color: var(--color-gray1);
-        }
+        
     }
     .tag{
         margin-right:1rem;
+    }
+  }
+
+  #button{
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+        .con-box{
+            display: flex;
+            flex-wrap:wrap;
+            gap:1rem;
+        }
+        .btn-box{
+            .inner-box{
+                display: flex;
+                gap:1rem;
+                padding:2rem;
+                background-color: #ccc;
+                border-radius:1.25rem;
+            }
+        }
     }
   }
 }

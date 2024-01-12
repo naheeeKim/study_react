@@ -1,0 +1,9 @@
+@use "../../style/var.scss" as color;
+
+.white {
+    color: var(--color-gray1);
+}
+
+.black {
+    color: var(--color-gray8);
+}
