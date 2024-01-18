@@ -36,6 +36,22 @@ export default function Main(){
                                                 </div>
                                             </div>
                                         </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="main-kv-slide-item">
+                                                <div className="bg">
+                                                    <div className="bg-inner"><img src="/images/temp/bg_main_kv_temp01.jpg" alt="" /></div>
+                                                </div>
+                                                <div className="main-kv-slide-txt-box">
+                                                    <span className="tag" data-size="l" data-color="white">서민금융진흥원 소개</span>
+                                                    <h1 className="headline1 tit">
+                                                        안정적인 금융생활의 첫걸음, <br /> 서민금융진흥원에서 시작하세요
+                                                    </h1>
+                                                    <Button type="arrow" tag="a" href="/" color="white" size="l" hoverType="open" hoverText="바로가기">
+                                                        <ArrowIcon type="arrow-left" direction="left" size="16" color="black" strokeWidth="1.5"></ArrowIcon>
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
                                     </Swiper>
                                 </div>
                                 <div className="main-kv-menu-box col-3 col-md-6">

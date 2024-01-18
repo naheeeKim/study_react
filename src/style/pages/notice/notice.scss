@@ -1,10 +1,32 @@
-.notice-list{
-    display: flex;
-    gap:3rem 1rem;
-    flex-wrap:wrap;
-    margin:5rem 0;
-    li{
-        width: calc(33.33% - 1rem);
+.notice{
+    &-list{
+        display: flex;
+        gap:3rem 1rem;
+        flex-wrap:wrap;
+        margin:5rem 0;
+        li{
+            width: calc(33.33% - 1rem);
+            cursor: pointer;
+        }
+    }
+    &-detail{
+        &-top{
+            text-align: center;
+            margin:5rem 0;
+            .date{
+                margin-top:2rem;
+            }
+        }
+        &-img{
+            text-align: center;
+            img{
+                width: 100%;
+                max-width: 1000px;
+            }
+        }
+        &-content{
+            margin:5rem 0;
+        }
     }
 }
 
